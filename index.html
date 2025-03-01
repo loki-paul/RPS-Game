@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <div id="game-container">
-        <h1>Rock Paper Scissors</h1>
-        <p id="timer">Timer: 3</p>
-        <button id="start-btn">Start Game</button>
+  <div id="game-container">
+    <h1>Rock Paper Scissors</h1>
+    <p id="timer">Timer: 3</p>
 
-        <!-- Mode and Difficulty Selection -->
-        <div id="settings">
-            <button id="mode-toggle">Mode: 1 Player</button>
-            <select id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="normal" selected>Normal</option>
-                <option value="hard">Hard</option>
-            </select>
-        </div>
-
-        <!-- Player 1 Choices -->
-        <div class="choice-container">
-            <h2>Player 1</h2>
-            <div class="choices">
-                <img src="assets/images/rock.png" onclick="handleChoice('Rock', 1)">
-                <img src="assets/images/paper.png" onclick="handleChoice('Paper', 1)">
-                <img src="assets/images/scissors.png" onclick="handleChoice('Scissors', 1)">
-            </div>
-        </div>
-
-        <!-- Player 2 Choices (Hidden in 1P Mode) -->
-        <div class="choice-container">
-            <h2 id="player2-title">Computer</h2>
-            <div class="choices" id="player2-choices">
-                <img src="assets/images/rock.png" onclick="handleChoice('Rock', 2)">
-                <img src="assets/images/paper.png" onclick="handleChoice('Paper', 2)">
-                <img src="assets/images/scissors.png" onclick="handleChoice('Scissors', 2)">
-            </div>
-        </div>
-
-        <!-- Display Selected Choices -->
-        <div id="selected-choices">
-            <img id="player1-choice">
-            <img id="player2-choice">
-        </div>
-
-        <p id="result">Who will win?</p>
-        <p id="score">Player 1: 0 | Opponent: 0 | Draws: 0</p>
-        <button id="reset-btn">Reset</button>
+    <!-- Player 1 Choices -->
+    <div class="choice-container">
+      <h2>Player 1</h2>
+      <div class="choices">
+        <img src="assets/images/rock.png" onclick="handleChoice('Rock', 1)" />
+        <img src="assets/images/paper.png" onclick="handleChoice('Paper', 1)" />
+        <img src="assets/images/scissors.png" onclick="handleChoice('Scissors', 1)" />
+      </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <!-- Player 2 Choices -->
+    <div class="choice-container">
+      <h2 id="player2-title">Computer</h2>
+      <div class="choices" id="player2-choices">
+        <img src="assets/images/rock.png" onclick="handleChoice('Rock', 2)" />
+        <img src="assets/images/paper.png" onclick="handleChoice('Paper', 2)" />
+        <img src="assets/images/scissors.png" onclick="handleChoice('Scissors', 2)" />
+      </div>
+    </div>
+
+    <!-- Display Selected Choices -->
+    <hr class="separator" />
+    <div id="selected-choices">
+      <img id="player1-choice" />
+      <img id="player2-choice" />
+    </div>
+
+    <p id="result">Who will win?</p>
+    <p id="score">You: 0 | Opponent: 0 | Draws: 0</p>
+
+    <!-- Controls Section -->
+    <div id="controls">
+      <button id="start-btn">Start Game</button>
+      <button id="mode-toggle">Mode: 1 Player</button>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <!-- Play Again Modal -->
+  <div id="play-again-modal">
+    <div id="play-again-content">
+      <p>Game Over! Play Again?</p>
+      <button id="yes-btn">Yes</button>
+      <button id="no-btn">No</button>
+    </div>
+  </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
