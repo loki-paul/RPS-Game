@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
   
@@ -48,14 +47,12 @@
   .choices img {
     width: 80px;
     margin: 5px;
+    border-radius: 100%;
     cursor: pointer;
     transition: 0.2s;
-    mix-blend-mode: multiply;
+    
   }
-  .choices img {
-    mix-blend-mode: multiply;
-    -webkit-mix-blend-mode: multiply;
-  }
+  
   
   .choices img:hover {
     transform: scale(1.1);
