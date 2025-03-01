@@ -1,0 +1,118 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+    background: url('../images/background.gif') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #e68900;
+}
+
+/* Settings Section */
+#settings {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Choices */
+.choice-container {
+    margin: 10px 0;
+}
+
+.choices img {
+    width: 80px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    mix-blend-mode: multiply;
+}
+
+.choices img:hover {
+    transform: scale(1.1);
+}
+
+/* Center Animation for Selected Choices */
+#selected-choices img {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.3s;
+    mix-blend-mode: multiply;
+}
+
+#selected-choices img.show {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+/* Score and Result */
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .choices img {
+        width: 60px;
+    }
+    #selected-choices img {
+        width: 80px;
+        height: 80px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
