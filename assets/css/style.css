@@ -52,6 +52,10 @@
     transition: 0.2s;
     mix-blend-mode: multiply;
   }
+  .choices img {
+    mix-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
+  }
   
   .choices img:hover {
     transform: scale(1.1);
@@ -71,6 +75,7 @@
     justify-content: center;
     gap: 20px;
     margin-top: 15px;
+    mix-blend-mode: multiply;
   }
   
   #selected-choices img {
